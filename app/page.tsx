@@ -2,7 +2,7 @@ import Image from "next/image";
 import BUHHS from "./media/BUHHS-Logo.png";
 import ScrollRevealText from './components/ScrollRevealText';
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div>
@@ -27,3 +27,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home;
