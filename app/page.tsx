@@ -4,8 +4,8 @@ import BUHHS from "./media/BUHHS-Logo.png";
 
 const ChangeText = dynamic(() => import("./components/change-text"), { ssr: false });
 
-export default function Home() {
-  return (
+const HomePage: React.FC = () => {
+    return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div>
         <Image src={BUHHS} alt="BUHHS Logo" width={250} height={250}/> 
@@ -39,3 +39,4 @@ export default function Home() {
     </main>
   );
 }
+export default HomePage;
