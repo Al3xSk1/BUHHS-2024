@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic';
 import Image from "next/image";
 import BUHHS from "./media/BUHHS-Logo.png";
-import ChangeText from "./components/change-text";
+
+const ChangeText = dynamic(() => import("./components/change-text"), { ssr: false });
 
 export default function Home() {
   return (
