@@ -2,7 +2,7 @@ import Image from "next/image";
 import BUHHS from "./media/BUHHS-Logo.png";
 import { motion } from 'framer-motion';
 
-export default function home() {
+export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div>
@@ -13,10 +13,7 @@ export default function home() {
           <p>Hello, this is my 2024 Boston University Hacks High School BUHHS</p>
         </h1>
       </div>
-      <div>
-        <p>Scroll down to reveal the text:</p>
-      </div>
-      <motion.div>
+      <motion.div initial="hidden" animate="visible">
         <h1 className="title">
           Wubba Lubba Dub Dub!
         </h1>
