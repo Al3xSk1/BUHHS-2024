@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/BUHHS-2024",
-  output: 'export',
-  reactStrictMode: true,
+  output:'export',
 };
-
-module.exports = nextConfig;
+/* module.exports = nextConfig*/
+export default nextConfig;
