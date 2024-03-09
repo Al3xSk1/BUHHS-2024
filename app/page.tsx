@@ -1,11 +1,9 @@
-import dynamic from 'next/dynamic';
 import Image from "next/image";
 import BUHHS from "./media/BUHHS-Logo.png";
+import ScrollRevealText from './components/ScrollRevealText';
 
-const ChangeText = dynamic(() => import("./components/change-text"), { ssr: false });
-
-const HomePage: React.FC = () => {
-    return (
+export default function Home() {
+  return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div>
         <Image src={BUHHS} alt="BUHHS Logo" width={250} height={250}/> 
@@ -16,27 +14,16 @@ const HomePage: React.FC = () => {
         </h1>
       </div>
       <div>
-        <p>Begin</p>
-        <ChangeText />
-        <p>Example Text Piece 1</p>
-        <ChangeText />
-        <p>Example Text Piece 2</p>
-        <ChangeText />
-        <p>Example Text Piece 3</p>
-        <ChangeText />
-        <p>Example Text Piece 4</p>
-        <ChangeText />
-        <p>Example Text Piece 5</p>
-        <ChangeText />
-        <p>Example Text Piece 6</p>
-        <ChangeText />
-        <p>Example Text Piece 7</p>
-        <ChangeText />
-        <p>Example Text Piece 8</p>
-        <ChangeText />
-        <p>End</p>
+        <p>Scroll down to reveal the text:</p>
+        <ScrollRevealText />
+        {"Example Text Piece 1"}
+        <ScrollRevealText />
+        {"Example Text Piece 1"}
+        <ScrollRevealText />
+        {"Example Text Piece 1"}
+        <ScrollRevealText />
+        {"Example Text Piece 1"}
       </div>
     </main>
   );
 }
-export default HomePage;
