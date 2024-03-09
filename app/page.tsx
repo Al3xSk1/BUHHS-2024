@@ -1,8 +1,8 @@
 import Image from "next/image";
 import BUHHS from "./media/BUHHS-Logo.png";
-import ScrollRevealText from './components/ScrollRevealText';
+import { motion } from 'framer-motion';
 
-const Home: React.FC = () => {
+export default function home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div>
@@ -15,17 +15,12 @@ const Home: React.FC = () => {
       </div>
       <div>
         <p>Scroll down to reveal the text:</p>
-        <ScrollRevealText />
-        {"Example Text Piece 1"}
-        <ScrollRevealText />
-        {"Example Text Piece 1"}
-        <ScrollRevealText />
-        {"Example Text Piece 1"}
-        <ScrollRevealText />
-        {"Example Text Piece 1"}
       </div>
+      <motion.div>
+        <h1 className="title">
+          Wubba Lubba Dub Dub!
+        </h1>
+      </motion.div>
     </main>
   );
 }
-
-export default Home;
