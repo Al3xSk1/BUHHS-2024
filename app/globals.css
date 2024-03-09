@@ -25,7 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+p {
+  font-family: monospace;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
