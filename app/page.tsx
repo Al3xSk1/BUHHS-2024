@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BUHHS from "./media/BUHHS-Logo.png";
+import ChangeText from "./components/change-text";
 
 export default function Home() {
   return (
@@ -11,6 +12,27 @@ export default function Home() {
         <h1>
           <p>Hello, this is my 2024 Boston University Hacks High School BUHHS</p>
         </h1>
+      </div>
+      <div>
+        <p>Begin</p>
+        <ChangeText />
+        <p>Example Text Piece 1</p>
+        <ChangeText />
+        <p>Example Text Piece 2</p>
+        <ChangeText />
+        <p>Example Text Piece 3</p>
+        <ChangeText />
+        <p>Example Text Piece 4</p>
+        <ChangeText />
+        <p>Example Text Piece 5</p>
+        <ChangeText />
+        <p>Example Text Piece 6</p>
+        <ChangeText />
+        <p>Example Text Piece 7</p>
+        <ChangeText />
+        <p>Example Text Piece 8</p>
+        <ChangeText />
+        <p>End</p>
       </div>
     </main>
   );
