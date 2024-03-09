@@ -1,24 +1,23 @@
-// components/ScrollRevealText.tsx
-
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const ScrollRevealText: React.FC = () => {
-  useEffect(() => {
-    const handleScroll = () => {
-      const { scrollTop, clientHeight } = document.documentElement;
-      const scrollHeight = document.documentElement.scrollHeight;
-      const scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+  const handleScroll = () => {
+    const { scrollTop, clientHeight } = document.documentElement;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
 
-      const textElement = document.getElementById('scrollRevealText');
+    const textElement = document.getElementById('scrollRevealText');
       
-      // If the user has scrolled past 50% of the page height, reveal the text
-      if (scrolled > 50 && textElement) {
-        textElement.classList.add('revealed');
-      } else if (textElement) {
-        textElement.classList.remove('revealed');
-      }
-    };
+    // If the user has scrolled past 50% of the page height, reveal the text
+    if (scrolled > 50 && textElement) {
+      textElement.classList.add('revealed');
+    } else if (textElement) {
+      textElement.classList.remove('revealed');
+    }
+  };
 
+  // Add scroll event listener when component mounts
+  React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
